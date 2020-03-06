@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="theme.css">
+        <script src="app.js" defer></script>
+        <title>Route Selector</title>
+    </head>
+    <body>
+        <div id="nav_bar">
+            <table id="route_selector">
+                <tr>
+                    <td width=33%>
+                       
+                        <p class="title"> <a href="./index.html"><img id="icon" src="./images/moto_white.png"></a>Route Selector: Let's Ride</p>
+                    </td>
+                    <td>
+                        <form id="route_finder">
+                            <label>From:</label>
+                            <select id="start_point" name="start_point">
+                            </select>
+                            
+                            <label>To:</label>
+                            <select id="end_point" name="end_point">
+                            </select>
+                            
+                            <input type="submit" value="Find Routes">
+                        </form>
+                        
+                    </td>
+                    <td>
+                        <a href="./add_route.html"><button class="button">Add Route</button></a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="results"></div>
+    </body>
+</html>

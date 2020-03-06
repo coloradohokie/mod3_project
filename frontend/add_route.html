@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="add_route.css">
+    
+    <title>Add Route</title>
+</head>
+<body>
+    <nav id="nav_bar">
+        <p class="title"> <a href="./index.html"><img id="icon" src="./images/moto_white.png"></a>Add a Route</p>
+    </nav>
+    <main>
+    <form id="add_route_form" method = 'POST' action="http://localhost:3000/paths">
+        <input type="text" name="overview" id="overview" placeholder="Route Title">
+        <div id="locations">
+            <label>Start Point</label>
+            <select name="start_point" id="start_point"></select>
+            <label>End Point</label>
+            <select name="end_point" id="end_point"></select>
+        </div>
+        <div id="ride_information">
+            <div id="textboxes">
+                <textarea type="text" name="description" id="description" placeholder="Description"></textarea>
+                
+                <textarea type="text" name="url" placeholder="Paste Google Map Link"></textarea>
+            </div>
+            <div id="properties">
+                <div class="property">
+                    <select name="difficulty" id="difficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                    <p>Difficulty</p>
+                </div>
+
+                <div class="property">
+                    <input type="number" id="distance" name="distance"> 
+                    <p>Miles</p>
+                </div>
+
+                <div class="property">
+                    <input type="number" id="time" name="time"> 
+                    <p>Minutes</p>
+                </div>
+            </div>
+        </div>
+        <input type="submit" id="submit_button" value="Add Route">
+    </form>
+    </main>
+    <script src="add_route.js"></script>
+</body>
+</html>
