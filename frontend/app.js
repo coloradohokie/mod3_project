@@ -35,9 +35,7 @@ function displayRoutes() {
     end = document.querySelector('#end_point option:checked').id
     fetch(`${BASE_URL}/paths?town_id=${startPoint.value}`)
     .then(response => response.json())
-    .then(response => {console.log(response)
-                        if (response.length == 0) {
-                            console.log ('no results')
+    .then(response => {if (response.length == 0) {
                             noResults()
                         }
                         else {response.forEach(displayRouteProperties)}
@@ -114,6 +112,9 @@ function displayRouteProperties(route) {
         h2.prepend(difficultySymbol)
         div.append(h2, map, table)
         resultsDiv.appendChild(div)
-    }    
+    }  
+    if (resultsDiv.innerHTML == "") {
+        noResults()
+    }  
 }
 
