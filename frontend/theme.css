@@ -187,10 +187,10 @@ iframe {
 }
 
 #no_results_div {
-    /* display: flex;
-    justify-content: space-between; */
+
+    justify-content: center;
+    display: inline-block;
     background-color:hsl(217, 10%, 25%);
-    width: 400px;
     height: 200px;
     border-radius: 10px;
     padding: 20px;
