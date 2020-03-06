@@ -12,25 +12,19 @@
     </div>
     <div id="results">
         <div id="show_page">
-            <table width = "100%">
-                <tr>
-                    <td>
-                        <h2>Overview</h2>
-                    </td>
-                    <td width ="10%" id="update_box">
-                            <button id="update_button"></button>
-                    </td>
-                </tr>
-            </table>
-            <table id="route_information_table">
-                <tr>
-                    <td colspan="2" id="description_box"></td>
-                </tr>
-                <tr>
-                    <td width ="70%" id="map_box"></td>
-                    <td id="stats_box"></td>
-                </tr>
-            </table>
+            <div id="box_header">
+                <div id="box_title">
+                    <h2>Description</h2>
+                </div>
+                <div id="update_box"></div>
+            </div>
+
+            <div id="description_box"></div>
+
+            <div id="route_information_table">
+                <div id="map_box"></div>
+                <div id="stats_box"></div>  
+            </div>  
         </div>
     </div>
     <script src="show.js"></script>

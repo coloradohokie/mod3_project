@@ -5,7 +5,7 @@ const showPage = document.querySelector('#show_page')
 const descriptionBox = document.querySelector('#description_box')
 const mapBox = document.querySelector('#map_box')
 const statsBox = document.querySelector('#stats_box')
-const updateBox = document.querySelector('#update_button')
+const updateBox = document.querySelector('#update_box')
 
 fetch(`http://localhost:3000/paths/${id}`)
 .then(response => response.json())
@@ -49,7 +49,7 @@ function displayStats(stats) {
 function displayUpdateLink() {
     updateLink = document.createElement('a')
     updateLink.href = `update.html?id=${id}`
-    updateLink.innerText = "Update"
+    updateLink.innerHTML = `<button class="button">Update</button>`
     updateBox.append(updateLink)
 
 

@@ -116,8 +116,7 @@ td {
 }
 
 #route_information_table {
-    border-collapse: separate;
-    border-spacing: 25px;
+    display: flex;
     font-size: 20px;
 }
 
@@ -201,6 +200,7 @@ iframe {
 
 #stats_box {
     font-size: 30px;
+    margin: 25px;
 }
 
 ul {
@@ -210,3 +210,14 @@ ul {
 li {
     padding-bottom: 20px;
 }
+
+#box_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#map_box {
+    margin-top: 25px;
+}
+
