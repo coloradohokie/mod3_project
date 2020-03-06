@@ -8,10 +8,13 @@ const BASE_URL="http://localhost:3000"
 
 fetch(`${BASE_URL}/towns`)
 .then(response => response.json())
-.then(result => result.map( town =>{
-    townsList(town, startPoint)
-    townsList(town, endPoint)
-}))
+.then(result => {
+    townsList({name: "Show All", id:99}, endPoint)
+    result.map( town =>{
+        townsList(town, startPoint)
+        townsList(town, endPoint)
+        })
+})
 
 function townsList(town, point) {
     let option = document.createElement('option')
@@ -32,7 +35,6 @@ function displayRoutes() {
     end = document.querySelector('#end_point option:checked').id
     fetch(`${BASE_URL}/paths?town_id=${startPoint.value}`)
     .then(response => response.json())
-    // .then(response => response.forEach(displayRouteProperties))
     .then(response => {console.log(response)
                         if (response.length == 0) {
                             console.log ('no results')
@@ -58,7 +60,7 @@ function noResults() {
 }
 
 function displayRouteProperties(route) {
-    if(route.destination == end) {
+    if((route.destination == end) || (end == "Show All")) {
         div = document.createElement('div')
         div.classList.add('route_card')
 
