@@ -45,6 +45,8 @@ textarea {
     width: 100%;
     margin-bottom: 20px;
     border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 
 }
 
@@ -109,5 +111,10 @@ textarea {
     margin-bottom: 2rem;
     padding: 2rem;
     color: whitesmoke;
-    
+}
+
+#submit_div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
 }

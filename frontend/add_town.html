@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="add_route.css">
+    <title>Add Town</title>
+</head>
+    <body>
+    <nav id="nav_bar">
+        <p class="title"> <a href="./index.html"><img id="icon" src="./images/moto_white.png"></a>Update Route</p>
+    </nav>
+    <main>
+        <form id="add_route_form" method="POST" action="http://localhost:3000/towns/">
+            <input type="text" name="name" id="name" placeholder="Enter Town Name">
+            <div id="submit_div">
+                <input type="submit" id="submit_button" value="Add Town">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
