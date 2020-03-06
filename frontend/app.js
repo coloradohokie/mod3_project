@@ -32,7 +32,29 @@ function displayRoutes() {
     end = document.querySelector('#end_point option:checked').id
     fetch(`${BASE_URL}/paths?town_id=${startPoint.value}`)
     .then(response => response.json())
-    .then(response => response.forEach(displayRouteProperties))
+    // .then(response => response.forEach(displayRouteProperties))
+    .then(response => {console.log(response)
+                        if (response.length == 0) {
+                            console.log ('no results')
+                            noResults()
+                        }
+                        else {response.forEach(displayRouteProperties)}
+                        
+    
+    })
+}
+
+function noResults() {
+    div = document.createElement('div')
+    div.id = "no_results_div"
+    h1 = document.createElement('h1')
+    h1.classList.add('no-results')
+    h1.innerText = "No Results Found"
+    p = document.createElement('p')
+    p.innerHTML = `<a href="./add_route.html">Click Here to Create the first route.</a>`
+
+    div.append(h1, p)
+    resultsDiv.appendChild(div)
 }
 
 function displayRouteProperties(route) {
