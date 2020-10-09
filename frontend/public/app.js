@@ -3,7 +3,7 @@ const endPoint = document.querySelector('#end_point')
 const routeFinderForm = document.querySelector('#route_finder')
 const resultsDiv = document.querySelector('#results')
 const townOptionsList = []
-const BASE_URL="http://localhost:3000"
+const BASE_URL=`https://motorcycle-route-selector.herokuapp.com/`
 
 
 fetch(`${BASE_URL}/towns`)

@@ -1,18 +1,18 @@
 const params = new URLSearchParams(document.location.search)
 const id = params.get('id')
 
-fetch(`http://localhost:3000/paths/${id}`)
+const BASE_URL = `https://motorcycle-route-selector.herokuapp.com/`
+
+fetch(`${BASE_URL}/paths/${id}`)
 .then(response => response.json())
-.then(route => { console.log(route)
-    displayForm(route)
-})
+.then(route => displayForm(route))
 
 function displayForm(route) {
     form = document.querySelector('form')
-    form.setAttribute("action", `http://localhost:3000/paths/${id}`)
+    form.setAttribute("action", `${BASE_URL}/paths/${id}`)
 
     startPoint = document.querySelector('#start_point')
-    fetch('http://localhost:3000/towns')
+    fetch(`${BASE_URL}/towns`)
     .then(response => response.json())
     .then(towns =>{towns.map( town => {
         option = document.createElement('option')
@@ -24,7 +24,7 @@ function displayForm(route) {
     })
 
     endPoint = document.querySelector('#end_point')
-    fetch('http://localhost:3000/towns')
+    fetch(`${BASE_URL}/towns`)
     .then(response => response.json())
     .then(towns =>{towns.map( town => {
         option = document.createElement('option')

@@ -7,7 +7,7 @@ const mapBox = document.querySelector('#map_box')
 const statsBox = document.querySelector('#stats_box')
 const updateBox = document.querySelector('#update_box')
 
-fetch(`http://localhost:3000/paths/${id}`)
+fetch(`https://motorcycle-route-selector.herokuapp.com/paths/${id}`)
 .then(response => response.json())
 .then(route => {
     displayTitle(route)

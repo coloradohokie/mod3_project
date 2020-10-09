@@ -2,7 +2,7 @@ const startPoint = document.querySelector('#start_point')
 const endPoint = document.querySelector('#end_point')
 const addRouteForm = document.querySelector('#add_route_form')
 
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = 'https://motorcycle-route-selector.herokuapp.com/'
 
 fetch(`${BASE_URL}/towns`)
 .then(response => response.json())
